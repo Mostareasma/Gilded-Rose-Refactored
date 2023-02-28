@@ -121,13 +121,14 @@ public class GildedRoseTest {
             new Item(CONJURED_MANA_CAKE, 10, 15),
         };
         GildedRose gildedRose = new GildedRose(items);
-    
-        
+
         // When
         int days = 10;
         for (int i = 0; i < days; i++) {
             gildedRose.updateQuality();
+            System.out.println(items[1]);
         }
+
 
         // Then
         assertEquals(30, items[0].getQuality());

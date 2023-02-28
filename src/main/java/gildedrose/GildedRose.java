@@ -34,7 +34,9 @@ public class GildedRose {
                 updateBackstagePasses(item);
                 break;
             case CONJURED_MANA_CAKE:
+
                 updateConjured(item);
+
                 break;
             case SULFURAS:
                 item.setSellIn(0);
@@ -67,7 +69,7 @@ public class GildedRose {
 
     private void updateConjured(Item item) {
         decreaseQuality(item, 2);
-        if (item.getSellIn() < 0) {
+        if (item.getSellIn() <= 0) {
             decreaseQuality(item, 2);
         }
     }
